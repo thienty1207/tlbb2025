@@ -1,63 +1,73 @@
-
-
----
-
-### **TRANG WEB SẼ TRÔNG NHƯ THẾ NÀO?**
-
-Trang web sẽ là bộ mặt chính thức của game, được thiết kế đẹp mắt, chuyên nghiệp và đậm chất kiếm hiệp, dựa trên những hình ảnh và ý tưởng đã trao đổi.
-
-**1. Màn hình chào mừng hoành tráng:**
-*   Ngay khi vào trang web, người chơi sẽ thấy một bức ảnh lớn, đẹp nhất của game, có các nhân vật chính và hình ảnh rồng mạnh mẽ để tạo ấn tượng ngay lập tức.
-*   Các nút quan trọng nhất như **"Tải Game"**, **"Nạp Thẻ"**, **"Đăng Ký"** sẽ được đặt ở vị trí dễ thấy nhất.
-*   Ngày ra mắt chính thức của game cũng sẽ được thông báo nổi bật.
-
-**2. Khu vực Tin Tức - Sự Kiện luôn cập nhật:**
-*   Một khu vực riêng để đăng tải mọi thông báo mới nhất, các sự kiện trong game và ngoài game.
-*   Người chơi có thể dễ dàng xem danh sách các tin bài, được sắp xếp gọn gàng theo ngày tháng.
-*   Có các danh mục rõ ràng như: "Tin Tức", "Sự Kiện", "Hướng Dẫn"... để người chơi tiện theo dõi.
-
-**3. Giới thiệu Hệ Thống Môn Phái sinh động:**
-*   Đây là khu vực để "khoe" các môn phái đặc sắc trong game.
-*   Sẽ có hiệu ứng trượt qua lại, người chơi chỉ cần bấm mũi tên là có thể xem lần lượt các môn phái.
-*   Mỗi môn phái sẽ có hình ảnh đại diện lớn, được thiết kế riêng rất đẹp, kèm theo mô tả ngắn gọn về điểm đặc sắc của họ.
-
-**4. Trưng bày các Tính Năng Huyền Thoại:**
-*   Tương tự như khu vực môn phái, đây sẽ là nơi giới thiệu các tính năng độc đáo của game (ví dụ: thú cưỡi, chiến trường,...) bằng những hình ảnh trong game hấp dẫn.
-
-**5. Chân trang (Footer):**
-*   Phần cuối cùng của trang web sẽ có đầy đủ thông tin về đơn vị phát hành, logo, thông tin bản quyền và các quy định cần thiết, thể hiện sự chuyên nghiệp và minh bạch.
+### 1. Mục tiêu trang web
+- Tạo một trang chủ ấn tượng, đậm chất kiếm hiệp, thu hút người chơi mới và giữ chân cộng đồng.
+- Cung cấp thông tin về game, các sự kiện, tính năng, hướng dẫn, hệ thống môn phái, và các liên kết tải game, nạp thẻ, đăng ký.
+- Dễ dàng quản trị nội dung qua trang Admin.
 
 ---
 
-### **KẾ HOẠCH QUẢN LÝ TRANG WEB**
+### 2. Chức năng chính của trang web
 
-Điều quan trọng nhất là việc quản lý trang web này sẽ **cực kỳ đơn giản**. Anh/Chị sẽ có một trang quản trị (Admin) riêng, được thiết kế dễ sử dụng, không cần biết về công nghệ.
+#### **A. Trang Landing Page (cho người chơi)**
+- Giao diện đẹp, đậm chất kiếm hiệp, màu sắc chủ đạo: vàng nhạt, cam nhạt, đỏ.
+- Responsive tốt trên mọi thiết bị.
+- Có hiệu ứng động khi cuộn trang và khi chuyển đổi các mục (ví dụ: slider môn phái).
+- Các khu vực chính:
+  1. **Banner chính:** Hình ảnh lớn, nút tải game, nạp thẻ, đăng ký, ngày ra mắt.
+  2. **Tin tức - Sự kiện:** Danh sách các bài viết mới nhất, phân loại theo tab (Tin tức, Sự kiện, Hướng dẫn, Tính năng).
+  3. **Hệ thống môn phái:** Slider các môn phái, mỗi môn phái có hình ảnh và mô tả ngắn.
+  4. **Tính năng huyền thoại:** Giới thiệu các tính năng đặc sắc của game.
+  5. **Footer:** Thông tin nhà phát hành, bản quyền, liên hệ.
 
-**Từ trang quản trị này, Anh/Chị có thể:**
-
-*   **Thay đổi khu vực Tải Game:**
-    +   Tự tay thay đổi ảnh nền của khu vực này.
-    +   Cập nhật link tải game mới nhất cho người chơi.
-    +   Thậm chí có thể thay đổi cả hình ảnh của nút "Tải Game" cho phù hợp với từng sự kiện.
-
-*   **Đăng tin tức, sự kiện:**
-    +   Dễ dàng thêm các bài viết mới. Chỉ cần một cái ảnh bìa và đường dẫn (link) tới bài viết chi tiết là xong.
-
-*   **Cập nhật hình ảnh Môn Phái:**
-    +   Khi đội ngũ thiết kế có hình ảnh mới cho các môn phái, Anh/Chị chỉ cần vào và tải ảnh đó lên là trang web sẽ tự động cập nhật.
-
-
+#### **B. Trang Admin (cho quản trị viên)**
+- Đăng nhập bằng Clerk.
+- Quản lý các nội dung trên trang Home:
+  - Thay đổi ảnh nền, ảnh nút, link tải game ở khu vực tải game.
+  - Thêm/sửa/xóa bài viết (tin tức, sự kiện, hướng dẫn, tính năng), upload ảnh banner, nhập link nội dung chi tiết.
+  - Thêm/sửa/xóa môn phái, upload ảnh đại diện môn phái.
+  - Quản lý các cài đặt chung (ảnh, link, v.v.).
 
 ---
 
-### **TỔNG KẾT**
+### 3. Cấu trúc các bảng dữ liệu (backend)
 
-Tạo ra một trang web:
-*   **Đẹp và chuyên nghiệp:** Giao diện đúng chất game, thu hút người chơi.
-*   **Sống động:** Có các hiệu ứng chuyển động mượt mà khi kéo trang và khi xem các mục giới thiệu.
-*   **Dễ dùng:** Hoạt động tốt trên cả máy tính và điện thoại.
-*   **Dễ quản lý:** Anh/Chị hoàn toàn có thể tự chủ trong việc cập nhật nội dung.
+#### **A. Bảng `posts` (Bài viết, tin tức, sự kiện, hướng dẫn, tính năng)**
+- `id`: Mã định danh bài viết (tự tăng)
+- `title`: Tiêu đề bài viết
+- `category`: Phân loại ("tin_tuc", "su_kien", "huong_dan", "tinh_nang")
+- `banner_url`: Đường dẫn ảnh banner
+- `content_url`: Đường dẫn tới nội dung chi tiết (có thể là link ngoài hoặc link nội bộ)
+- `published_at`: Ngày đăng
+- `created_by`: Người tạo (nếu cần)
 
-Anh/Chị xem qua kế hoạch này và cho em biết nếu có bất kỳ điểm nào cần bổ sung hoặc thay đổi để phù hợp hơn với mong muốn của mình nhé.
+#### **B. Bảng `sects` (Hệ thống môn phái)**
+- `id`: Mã định danh môn phái
+- `name`: Tên môn phái (ví dụ: "Tiêu Dao")
+- `image_url`: Đường dẫn ảnh đại diện môn phái
+- `description`: Mô tả ngắn về môn phái
+- `order`: Thứ tự hiển thị
 
-Cảm ơn Anh/Chị!
+#### **C. Bảng `site_settings` (Cài đặt chung cho trang web)**
+- `key`: Tên cài đặt (ví dụ: "download_background_url", "download_button_image_url", "download_link")
+- `value`: Giá trị cài đặt (đường dẫn ảnh, link, v.v.)
+
+#### **D. Bảng `users` (Quản lý tài khoản Admin)**
+- `id`: Mã người dùng (sẽ được đồng bộ từ Clerk, không phải số tự tăng).
+- `email`: Địa chỉ email của quản trị viên.
+- `username`: Tên đăng nhập.
+- `role`: Vai trò (ví dụ: "admin", "editor") để phân quyền trong trang quản trị.
+- `full_name`: Tên đầy đủ (tùy chọn).
+- `avatar_url`: Link ảnh đại diện (tùy chọn).
+- **Lưu ý:** Mật khẩu sẽ do Clerk quản lý và mã hóa an toàn, không lưu trong bảng này.
+
+#### **E. (Tùy chọn) Bảng `features` (Tính năng huyền thoại)**
+- `id`: Mã định danh tính năng
+- `title`: Tên tính năng
+- `image_url`: Ảnh minh họa
+- `description`: Mô tả ngắn
+- `order`: Thứ tự hiển thị
+
+---
+
+### 4. Ghi chú
+- Các bảng trên có thể mở rộng thêm trường nếu phát sinh nhu cầu thực tế.
+- Tất cả nội dung đều có thể quản lý dễ dàng qua trang Admin, không cần biết kỹ thuật.
