@@ -2,7 +2,7 @@
 
 ## 1. Project Overview & Core Task
 
-Your primary task is to build a complete, feature-rich, and professional admin dashboard using React for the game "Thiên Long Bát Bộ". This dashboard is a separate frontend application that interacts with an existing Node.js/Express backend API. You must strictly adhere to the technology stack and functional requirements outlined below.
+Your primary task is to build a complete, feature-rich, and professional admin dashboard using React for the game "Thiên Long Bát Bộ". This dashboard is a separate frontend application that interacts with an existing Node.js/Express backend API. You must strictly adhere to the technology stack and functional requirements outlined below..
 
 ## 2. Mandatory Technology Stack
 
