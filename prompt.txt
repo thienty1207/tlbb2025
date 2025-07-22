@@ -1,0 +1,104 @@
+# Prompt for Lovable AI: Build a React Admin Dashboard for "Thiên Long Bát Bộ" Game
+
+## 1. Project Overview & Core Task
+
+Your primary task is to build a complete, feature-rich, and professional admin dashboard using React for the game "Thiên Long Bát Bộ". This dashboard is a separate frontend application that interacts with an existing Node.js/Express backend API. You must strictly adhere to the technology stack and functional requirements outlined below.
+
+## 2. Mandatory Technology Stack
+
+- **Framework:** React (latest version, functional components with Hooks only).
+- **Build Tool:** Vite.
+- **Language:** JavaScript (ES6+).
+- **Styling:** Tailwind CSS.
+- **UI Component Library:** `shadcn/ui`. You must use this for all standard components like Tables, Buttons, Forms, Modals/Dialogs, Dropdowns, etc.
+- **State Management (Server):** `@tanstack/react-query` for all API data fetching, caching, and mutations. Do not use `useEffect` with `fetch/axios`.
+- **Routing:** React Router v6.
+- **HTTP Client:** Axios. Configure a single instance to be used throughout the application.
+- **Authentication:** `@clerk/clerk-react` for all user authentication.
+
+## 3. UI/UX Design & Layout
+
+- **Inspiration:** The design must be professional and modern, inspired by the provided reference image (dark sidebar, light main content area).
+- **Main Layout:**
+    - A fixed, dark-themed sidebar on the left (`bg-gray-900` or similar) for navigation.
+    - A light-themed main content area (`bg-white` or `bg-gray-50`) that displays the selected page.
+- **Interactivity:**
+    - **Tables:** All data lists must be displayed in `shadcn/ui` Tables with sorting, filtering, and pagination.
+    - **Detail Panel:** When a user clicks on a row in any table, a right-hand-side "drawer" or "panel" must slide out, displaying the detailed information of that item and providing action buttons (Edit, Delete).
+
+## 4. Authentication Flow (Clerk)
+
+- The application is a protected admin panel. All routes except the login page are private.
+- Create a login page at `/sign-in` that uses the `<SignIn>` component from Clerk.
+- After a successful login, the user should be redirected to the `/admin` dashboard.
+- All admin routes must be wrapped in Clerk's `<SignedIn>` component to ensure only authenticated users can access them.
+- Use Clerk's hooks (`useUser`, `useClerk`) to get user information (like avatar and name for the sidebar) and handle sign-out.
+- After login, make a `POST` request to the `/api/auth/sync-user` endpoint to sync the user's Clerk data with the backend database. This is a critical step.
+
+## 5. Required Features & CRUD Interfaces
+
+You must implement the following management modules. Each module should have a dedicated page accessible from the sidebar navigation.
+
+### 5.1. Posts Management (CRUD for `posts` table)
+- **View:** Display a table of all posts with columns: `Title`, `Category`, `Status` (Published/Draft), and `Published Date`.
+- **Filtering:** Add dropdowns to filter posts by `category` ('tin_tuc', 'su_kien', 'huong_dan', 'tinh_nang') and `status`.
+- **Create/Edit Form:** A modal/dialog with fields for:
+    - `title`: (Text Input)
+    - `category`: (Select/Dropdown)
+    - `banner_url`: (File Upload)
+    - `content_url`: (Text Input)
+- **API Endpoint:** `/api/posts`
+
+### 5.2. Sects Management (CRUD for `sects` table)
+- **View:** Display a table or grid of game sects. Columns: `Name`, `Description`, `Display Order`.
+- **Create/Edit Form:** A modal/dialog with fields for:
+    - `name`: (Text Input)
+    - `description`: (Textarea)
+    - `image_url`: (File Upload)
+    - `display_order`: (Number Input)
+- **API Endpoint:** `/api/sects`
+
+### 5.3. Features Management (CRUD for `features` table)
+- **View:** Display a table of game features. Columns: `Title`, `Description`, `Display Order`.
+- **Create/Edit Form:** A modal/dialog with fields for:
+    - `title`: (Text Input)
+    - `description`: (Textarea)
+    - `image_url`: (File Upload)
+    - `display_order`: (Number Input)
+- **API Endpoint:** `/api/features`
+
+### 5.4. User Management (for `users` table)
+- **View:** Display a table of users. Columns: `Avatar`, `Email`, `Name`, `Role`.
+- **No Create:** Users are created via Clerk sync, not manually.
+- **Edit:** The detail panel should allow an admin to change a user's `role` via a dropdown ('admin', 'editor'). This should trigger a `PUT` request to `/api/auth/update-role`.
+- **API Endpoint:** `/api/users` (for fetching) & `/api/auth/update-role` (for updating).
+
+### 5.5. Site Settings Management (for `site_settings` table)
+- **View:** This is a single form page, not a table.
+- **Functionality:** Fetch all settings from `/api/site-settings`. For each key-value pair, display a corresponding form field (e.g., a text input for `site_title`, another for `download_link`).
+- **Update:** A single "Save All" button should make multiple `PUT` requests to `/api/site-settings/:key` for each setting that has been changed.
+- **API Endpoint:** `/api/site-settings`
+
+## 6. Project & File Structure
+
+Organize the code using the following folder structure inside `/src`:
+
+```
+/src
+|-- /assets         # Images, fonts
+|-- /components     # Reusable UI components
+|   |-- /ui         # Components from shadcn/ui
+|   |-- /layout     # Sidebar, Header, MainLayout
+|-- /constants      # API endpoints, route paths
+|-- /hooks          # Custom hooks
+|-- /lib            # Axios instance, utils
+|-- /pages          # Top-level page components for each route
+|   |-- /admin
+|   |   |-- DashboardPage.jsx
+|   |   |-- PostsPage.jsx
+|   |   |-- SectsPage.jsx
+|   |   |-- etc.
+|   |-- SignInPage.jsx
+|-- /services       # API functions (e.g., getPosts, updatePost)
+|-- /styles         # global.css, tailwind.config.js
+```
