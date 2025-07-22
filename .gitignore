@@ -1,0 +1,17 @@
+# Ignore .cursor/rules directory
+.cursor/rules/
+
+# Ignore API key files (common patterns)
+*.env
+*.env.*
+*.apikey
+*.key
+*api_key*
+*apikey*
+*secret*
+*secrets*
+.env.local
+.env.production
+.env.development
+.env.test
+# End Generation Here
